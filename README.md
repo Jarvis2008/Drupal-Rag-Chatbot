@@ -1,6 +1,6 @@
 # Drupal-Rag-Chatbot
 
-This project leverages the case studies available on the drupal.org website available on the link https://www.drupal.org/case-studies to create a Retrieval Augmented Generation ChatBot.
+This project leverages the case studies available on the drupal.org website on the link https://www.drupal.org/case-studies to create a Retrieval Augmented Generation ChatBot.
 
 You can clone the repository using the link
 
