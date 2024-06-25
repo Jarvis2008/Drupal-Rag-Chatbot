@@ -4,7 +4,7 @@ This project leverages the case studies available on the drupal.org website on t
 
 You can clone the repository using the link
 
-`git clone Jarvis2008/Drupal-Rag-Chatbot`
+`git clone https://github.com/Jarvis2008/Drupal-Rag-Chatbot.git`
 
 After Cloning the repository you need to check whether docker, docker-compose is installed on the system.
 
