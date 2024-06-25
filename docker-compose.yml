@@ -1,0 +1,40 @@
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+
+    volumes:
+      - neo4j_data:/data
+      
+  
+  
+  gradioapp:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - neo4j
+    tty: true
+    stdin_open: true
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - NEO4J_URI= bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=password
+      - NEO4J_DATABASE=neo4j
+    ports:
+      - "7860:7860"
+    command: python gradio_app.py
+volumes:
+  neo4j_data:
+  
+
