@@ -6,7 +6,7 @@ You can clone the repository using the link
 
 `git clone https://github.com/Jarvis2008/Drupal-Rag-Chatbot.git`
 
-After Cloning the repository you need to check whether docker, docker-compose is installed on the system.
+After Cloning the repository, create a .env file and `GROQ_API_KEY' which can be found on https://console.groq.com/keys  and after that you need to check whether docker, docker-compose is installed on the system.
 
 If Docker Daemon is running, then you can run this command to build the RAG application and it will give you a sharable gradio app link.
 
